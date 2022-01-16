@@ -1,0 +1,3 @@
+User Story	Perspective	Description	Implementation
+1	User	Want to search for different consoles rather than just PS5	Add an search bar that invokes searching in different websites
+2	User	Want to set the frequency of notifications	Add a settings option. Automation helps send emails.
