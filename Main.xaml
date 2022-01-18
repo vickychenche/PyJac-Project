@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="240,204.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,2388" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -22,10 +22,29 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-    </sco:Collection>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -41,6 +60,135 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="720,2323" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="websiteUrls.xlsx" Name="excelPath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtUrls" />
+      <Variable x:TypeArguments="x:String" Name="userInp" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="678,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter an item to search" Title="Item to Search">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[userInp]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="678,1953" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="8600f195-1769-4a3e-b4cb-15e6ca0e2ddf" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,1737" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1643" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtUrls]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Sheet1" WorkbookPath="[excelPath]" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtUrls]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1267" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1146" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="484,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[row.ItemArray(1).ToString +userInp]" Version="V1" />
+                      <If Condition="[row.ItemArray(0).ToString = &quot;Amazon&quot;]" sap:VirtualizedContainerService.HintSize="484,931" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,743" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strAvailable" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'PlayStation 5'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8600f195-1769-4a3e-b4cb-15e6ca0e2ddf" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.amazon.ca/s?k=PS5" DesignTimeRectangle="829, 589, 186, 20" ElementType="Text" FriendlyName="'PlayStation 5'" FullSelectorArgument="&lt;webctrl aaname='PlayStation 5 Disc Edition' parentid='search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='PlayStation 5 Disc Edition' parentid='search' tag='SPAN' type='' check:text='PlayStation 5 Disc Edition' /&gt;" Guid="0efd2064-e1ed-4f35-93ad-c089ad6cbb8c" ImageBase64="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" InformativeScreenshot="dc8d6b35b1736c2af2f4c22c22fbbba1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.ca : PS5' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'See All Buying Options'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8600f195-1769-4a3e-b4cb-15e6ca0e2ddf" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.amazon.ca/Playstation-3006648-PlayStation-Disc-Edition/dp/B09DPJ2TGW/ref=sr_1_2?keywords=PS5&amp;qid=1642489586&amp;sr=8-2" DesignTimeRectangle="1468, 409, 204, 29" ElementType="Text" FriendlyName="'See All Buying Options'" FullSelectorArgument="&lt;webctrl aria-role='button' parentid='buybox-see-all-buying-choices' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' parentid='buybox-see-all-buying-choices' tag='A' type='' aaname=' See All Buying Options ' check:text='See All Buying Options' /&gt;" Guid="d32b19d2-4bf3-40f4-be90-22d0ca1f2797" ImageBase64="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" InformativeScreenshot="74387aa0a8452d366e9cad70929206d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC%7C01ZTHTZObnL.css,41wZkyTaWoL.css,31Y8m1dzTdL.css,013z33uKh2L.css,017DsKjNQJL.css,0131vqwP5UL.css,41EWOOlBJ9L.css,11TIuySqr6L.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.c*' title='PlayStation 5 Disc Edition : Amazon.ca: Video Games' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NGetText DisplayName="Get Text '8 options'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8600f195-1769-4a3e-b4cb-15e6ca0e2ddf" Version="V1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.amazon.ca/Playstation-3006648-PlayStation-Disc-Edition/dp/B09DPJ2TGW/ref=sr_1_2?keywords=PS5&amp;qid=1642489586&amp;sr=8-2" DesignTimeRectangle="1346, 305, 57, 17" ElementType="Text" FriendlyName="'8 options'" FullSelectorArgument="&lt;webctrl id='aod-filter-offer-count-string' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='aod-filter-offer-count-string' tag='SPAN' type='' /&gt;" Guid="2c091230-7167-45fd-82a7-d171ef9fa68b" InformativeScreenshot="b084b9a467968bd2285384af40c5234c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC%7C01ZTHTZObnL.css,41wZkyTaWoL.css,31Y8m1dzTdL.css,013z33uKh2L.css,017DsKjNQJL.css,0131vqwP5UL.css,41EWOOlBJ9L.css,11TIuySqr6L.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.c*' title='PlayStation 5 Disc Edition : Amazon.ca: Video Games' /&gt;" SearchSteps="FuzzySelector" />
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="x:String">[strAvailable]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[row.ItemArray(2)]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object">[strAvailable.Replace(" options","")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="242,84" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+              <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtUrls]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="560,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[excelPath]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="1f9d2172b478e57c0838d1474d404f48.png" Selector="&lt;html app='chrome.exe' title='New Tab'/&gt;" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
 </Activity>
