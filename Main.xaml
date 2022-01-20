@@ -1,12 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="Hololive" Type="OutArgument(sd:DataTable)" />
-  </x:Members>
-  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>825,717</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1487.33333333333,1768.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -24,41 +18,32 @@
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
       <x:String>System.Xml</x:String>
-      <x:String>System.Text</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities</x:String>
-      <x:String>UiPath.Platform.ObjectLibrary</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
-      <x:String>UiPath.Excel</x:String>
-      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
-    </sco:Collection>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -75,65 +60,130 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="518,652" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="781.333333333333,1704" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="UserInput" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,560" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="739.333333333333,296" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter an item to search" OptionsString="Playstation 5" Title="Item to Search">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[UserInput]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <Sequence sap:VirtualizedContainerService.HintSize="739.333333333333,1276" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="websiteUrls.xlsx" Name="excelPath" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="434,468" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2738faea-dcf8-4312-9c6c-87a89c707fad" Version="V1">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="697.333333333333,233.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8600f195-1769-4a3e-b4cb-15e6ca0e2ddf" Version="V1">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="1f9d2172b478e57c0838d1474d404f48.png" Selector="&lt;html app='chrome.exe' title='New Tab'/&gt;" Url="chrome://newtab/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="697.333333333333,910.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[excelPath]">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="663.333333333333,802" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="variable1" />
+                <Variable x:TypeArguments="sd:DataTable" Name="ReadRangeOutput" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 1'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='ytd-video-renderer' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='ytd-video-renderer' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='yt-formatted-string' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='ytd-video-renderer' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ytd-channel-name' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='yt-formatted-string' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="15" ScopeIdentifier="2738faea-dcf8-4312-9c6c-87a89c707fad" Version="V1">
-                <uix:NExtractData.DataTable>
-                  <InOutArgument x:TypeArguments="sd:DataTable">
-                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Hololive</mca:CSharpReference>
-                  </InOutArgument>
-                </uix:NExtractData.DataTable>
-                <uix:NExtractData.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="852, 419, 1754, 8470" FriendlyName="'30:20現正播放'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div' id='contents' parentid='contents' tag='DIV' /&gt;" Guid="760872d2-5558-443e-a9d3-ad421d689c3f" InformativeScreenshot="9a5184c7417ca8c3c4415c0e615f31a2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='hololive - YouTube' /&gt;" SearchSteps="Selector" />
-                </uix:NExtractData.Target>
-              </uix:NExtractData>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[ReadRangeOutput]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="621.333333333333,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1:B4" SheetName="websiteUrls" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ReadRangeOutput]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="621.333333333333,611.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="587.333333333333,491.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[CurrentRow.ItemArray(0).ToString = &quot;Amazon&quot;]" sap:VirtualizedContainerService.HintSize="545.333333333333,399.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="508.666666666667,210" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strAvailable" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.666666666667,118" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[CurrentRow.ItemArray(1).ToString + UserInput]">
+                              <ui:OpenBrowser.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                </ActivityAction>
+                              </ui:OpenBrowser.Body>
+                            </ui:OpenBrowser>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
             </Sequence>
           </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-13, -13, 3098, 1886" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAA8MSURBVGhD7ZgJVFRXmsczM9197HTSUVFcErckjknsGDuK7MoiKptilBCT0RY1aScmM4mJ3Woc48TgAkiDgAtLUezIvoPsaxVbFUtRxVZAse9LUeASlX/fV7xXPIrC2J30zDlz5jvnd+6jDlT9/ve7775bPPf/9X+h/omU7uKFxmd+/5azt9Gm6Ghzw6J8W3OpeL+1QmRvNZZvYyaN3m5Q6GX4btSfNrxxdbPWfCPqb+g//98r0+XaVi66G7nl+3b1Ne/biea9FtPYbUfzHnMaM0h3m05DXivbbd57Ved3AVu1F+6i3+5/rrYsWmgUu9OY32xvCaU4xXs7ZgZgQqiCmE0HsaWxMVGO0Sa6xZsXvmRIv/0/rla/+Ju1HDP95BZ7K7Ts36XkqfKqDmjoAhNAyTblzz6Gv09Y9fyvX6M/7uct05e1ravtrUZa9lsScQpangnwt4Rgd4AJYL0VUqutqLQyGf7Zl9Un69eekn5g+3hanhWAEtfUhRnLZ44OqEKQAEwIQqONyeMjr6/6kv74n1bf62683eJgjRay3pXQ8j+6hJgQmjrABFB1YGYXGC6886YXrfH31dF1a041UIKMvFqAGUtIk7wqwNQNPKsLT5GXWhqjycoYjq+v+ILW+dvKWFvLpnKvxeM6ItO0jxJm5DWEeKYOzLELsQOwQ5AAFI3W2x4bLV6wg9Z6ttJ6Yd7qTCuTUSF549o9pmggglIqBKsDM2Z/rg6o5KcCaJYnMPJMAFq+ydJISeUuo+GVz897ldb78TL71DIvfZcRSq23oZp8qITINL5noZr1WbOvHoBZPqoQGmZfGYK+edkd0BRilyFub9kQR+s9vea9sdTo9dA/4tSntsizMkQFeTMR+eA6O3NIKVFm5tnyGkI0EnHJbjOIlZhCTIRVkFkXk8mhqCXCKoiwCjKBtUS8dqfB1EjYNP8lI1pz7lp1cT//1dCPoX/jDwghb1JsRVpoa4JaIlFPzSg7hJp4/T6y1P77LNoTYtAnrsVgT/ej4cHex0MdYnQJYtCc8BXqvPXQeGMzpDd10HJ7M2Q+Omjz24LOAB10cregO1gHPUE6GAjVwWD4ZgxHboEiRheKWF0UXNtYRmtqruc3rLSk5BkcT+9DgoUhSqyNUUNmjZrRxj10CJa4lNB04TQG6sSQy+VPZbBTgrb0k5AF66EjTA+d4XrovqOvpDdGH0NxBpAnG+BeuiEeZBjhYaYRfsgiY7Yhfsg2wi69hZa07uxadtycS4mvCZlifcBReOw1QepOI+VSqiWdaCBLgxJmAjSRsS3YXyUoaRvDjbtj+Hd/Bew9xrHffRzHybV3+hgksjHV7/UKfdAVbYieOEMMpxhhIsMYD3O34UkhTRGhmMAj8AklhNJt8Dv3hh+tO7Oo4+3qmwd7GXmGPd87IGa7HrLIGqwknRCTEI3kfmBmvz2YoxQaHpXDM12BPdfGYes6ExuXcVgTqNEjVYGhkakQo2J/ImlKJE0xyTfDZAkZS8hYagaUmQPlhApyLSAjBbnuydjWo/EoPm/dUsPVIcfAhgnxX0d2IJmEyNtpSJbSVtSRpdS0dztavjurkj8drsBuIk+hKQATwsp5HKdCp0PcqzmDyXILTFZYEEmCkGE7ayQwIQRm0Hv7t3q09nQtdNC9vCr4KCjUQ2z1OIgosy3IsNBDEbmxqd2DesAN1tcpJTzTFLOkGRhxNlQId9IJZRf6JHhcYUkkd9DC6rADUN0ww8UTr16ktadr8WemEUwATRz/cjcSSRdyduijlISQ0rNPrXlq2fzYzLPlKawJYvqeuCc+RySpAOohZstThDr9LpTWnq5l52wKNIkzvOPjCH8rfdy10Ech2ZvbkuOUH07dsHOJzyXP4JlG39St8URUUwdmLh2GXN93c2nt6VruYt+0MvgIKNTlmdcdvt2PZHMd5FsYqLZMardRD8DADsAWt7w6xce+U8tITpbRk4o5Zl8ZYlqeoiFOv4HWnq4VfocU6sIMzOtrAo/A+UNTZJrrkrXbp/xwapucS5oRZwegxJnrvW7jUwGGe/GoTE1eNfNspgIoirYqaO3pWulzcExdXBMWLgeQZKqDEVYA9pJhUJ91NkwH7D2GkVjeCP8cEQLSE7H7SgIsv0vDSe8IfHM7EHHRZzDA26cSZxgrMB6jtadrict7jSuCHPE0mBAnj1uiv35qCVEPKXXxp808Ne52G4Gdlxj2vgWwu5GLnW6ZMHFJgY13Fsy/T8KOi+mwvZILO+di2F7Kh3fQdfQVvacK0BCnN3sJLf7GKl+TNJtXaDbdOIj6pFhlAOoJy0izYcTVOcoZhmuODH9OkuA/o0U4FS3B53eqcYhbhg98S2DpnAnLK9nY58bD+258HPLgY/flAnzkmgFR9mckgClybm2cfRMv+HRbBCM4F+wgboFOygDU8YA98+ry7DV/IWYcks5xxPB7cPNuGzxTZHCNb8aVOCm+i2rE2RAJ/iOwDqdvZOGkWyKO+4hw0k+A86FVcHQvwTGPUrSVfoPg79+avY3+1v7dS+rCDC8HHlbCfu1fAxwhq6+7T4WgjgdPm3UqxLdRClS1jKBQMoAUYS9iS7sRUdyJoPwOBOR0wC+TBEpqgXOCDO5hxbjKyYJzUiuuJraB33YPGfWD5HebkCaUwcvlYCStPV2/XKttwIg+C8sD/wDHLHdlF6hjAXU80CROccBLgdJ2OYSdQ+BJ+1DSMoQ86RDSxX2IE3TirqQf8bUDSBb2IJoECy9oQWBRK7wLe/HVtSicPn8VfwmIR/3QOBqGBnG3UjK2aOkrq2n1qaIOSEs8HHopMXXmCkDhLpx6oFEhqOMB9YRVDxApvIfhySdoH78H6egESvsnkCEbRZFsEOU9ChR2jSGkfhQJoj6kinoRWSxFJK8FX591gtnba2Gwbg3eXrkETp5cJEpGcC2tCR+cdObS6tM1/6ihP1tcnWU07OuXAx1JiHhlCArqeOCZOqZ8SNmRff7YrVE0ZPAhbe1G/6MHhB9QOzyBmgEFygbGUDlyHyLFQxT3jkPYJQevQ460mmZwE3Jgb2ONT+xtcWS/HXTWroapsSm4Be2o7RjHxINHWLFcrQu/Wr9sJ1uOQT2AOku5h+CY6Q5Rd7MqCMP9MTn6cgTo5tXhvvw+uqub8eTBQ+DJJNmKu9Au7kRTax/qu4fRIVdASn6H39SKpHIxsrKyUJ4UBu41JxzbvwfrV7+MGkE5Jgd7IJdIcMjGfva/XBad3VXEFqNQ/1mdJdyDSlYGHcGxLA+EiXNQ0yVF91A/JiYmMNHZi0rvBLQWijEgbsdoQw9ay8rBS47HaNMgumu6kcspBb9Igr5HkyipqUZ+jRgSiRjtJelI8/fEX858hQ3rXkc4lwOq7nf1Iuyqdx6tPV2/WrvYcGmAZtG5gjABGLSV4yHStcNoahJBlpyFyhvRkMsG0CtuRcWdXOTfCUNGxh30Nfejr1qGqpgy5IUWonOwD6VlhRBLm8AN5mLTG6vgffkCXM6fQWpqKgK5gciOScSE/AGEOfxKWntmLfjcJF5dUpMoAyWsicUB/4aeYiFqglPQmloCRUs3BOGp6KhoRE9bLUoyojDSOoDRui6IE8uQ5BUJQa0YOTmpKCzKRXx8OL75+gSK8/IQ7O+HkZFRCITk2fBHewS4HEYW9zpo5Zn1L4tffE3by2FYk6wm1KWZkaKccwd830gMi6UYqq2FhBzD7/V2QyrJQ5eIj/ZSKaoS+Mj0TkEsJxZ5ghrExkciIjYGwvoG8HlFKCsRoK21HWPkfsrK5SE1gYP46xbwPGuqOQBV1A2tzfnw8VyibBhZ9jXFooCPkJYRjeaKMogKkyDIvgMxWdO8lHCyDPyQGB+B2FuRSA9KRHl2EfKLyyEgu1VUTDSCQkPALxeihM9DR0cHOto7oBhXIC09HS6u3oi8eQI3L5hU0bqa63mLN79Ul2XDlmVLs699MkNQXsJDWV40eOkcFKeHID3GHxkxoQjm+iAkLAJpmYnIuOuJ3BRfdMjEyMtMwi1PV0QH+aEgKw0iUQ2qhAKMkw2BqsSEVNha78cBO+PZN7F6vfiRjpd2gGZhSlBdmEKLM837QZ/D3/8c4qLcUJobiLxUP6SEeSDUxwW3r7vimstlREf5Izf5OhK4XyM35jxqixLQLuFhuE2EUUKXrFG5JUvqG5GYno8/n3eDrcNnWLN247P953re9nVfLPI78HgucUaWkWcHWU/OTbmF18jadQOvygui1hDklnkiJuUKgiOc4Ol+DneTOKjKDUJlYSyKUr2Rn+IJYT4Hva35UIy24eH9MTz6YRwKxRDKK8uRSp4PnPAozF+gNfNB9rT6xfqlO7Q87IcZOTbqARZyPpzmlgM5sTqhTRGBjnux5EEVAdFAMMraA1DZGYmsCj8IBLFoFSSgMjscXXXZ4KUGkEC+EGR6ojKXi8bqXMgHO/DowSgePxjEPXk7vNwvzT5K/Fj98+IXXn3pxNZ4Lf8PZ8w0I8sEYVjgfwBmHHs8qN4LSZ8bmuVhaB6NRFUnBxWt/hDKgpFW5QFxSxKGGjIhSPNDGwnSKclHfmIAcmK9yHgDwgJy72ST0MVJkLXUorureXTVqhXPPvvq9YvXtPTnn7Yo0vLXMOOEBZwDSub7OKCZZ6f8FjUksoe43wfiPg45kbqgtNmVHBmuI7n0IgQSLvolcSiMdUdl6i1UZZIO5EUg7KYTwrzPIiv2KuJDLiPolhN8va5Ab8smO1rlp9Uv31q284VDev5arnt6FpKusAPM9/8AJ6IdMCm0mJz6KmiK+02fQT6RAPl4EkbGQjA4GA5pizfZIqOgkGWhgx+KQVEs+krDoahPRHddCsqjbkCa6Yu6tNsQxN2ElYn+Yfrjf76ijuJUV369d4PTbz4xCH/plHn+/AtWjRXxFj2D2UaK2sgtjZk338kP/O7N8AAPm6imlkBFz0AMpG2hqKq7heb2BCjai8m3LfLAq0tDJxk7S2Mx3pGN/sa7ECQFoCKJM2pqsPnnmfmfWstf0Vr97aVD3OJqT2QUX0GVOBIT7QWQlXAgJTdvyR1nlBKqEzzQLwzBpT8d5i5ZtODvX/P/qHpl5YrVjsc//iI9IymPl8GtEmZ4o5BIu577uOrsp+/n2ZrrfqH9VPHnnvsrQ22Hu5kvi10AAAAASUVORK5CYII=" InformativeScreenshot="9649e8d822b9a7f5c736c8f825376476.png" Selector="&lt;html app='chrome.exe' url='https://www.youtube.com/results?search_query=hololive/' /&gt;" Url="https://www.youtube.com/results?search_query=hololive/" />
-        </uix:NApplicationCard.TargetApp>
-      </uix:NApplicationCard>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
     </Sequence>
   </Sequence>
 </Activity>
