@@ -89,12 +89,12 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ReadRangeOutput" />
+      <Variable x:TypeArguments="sd:DataTable" Name="resultsTemp" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -114,7 +114,7 @@
           <av:Size x:Key="ShapeSize">200,52</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: ps5 console | eBay" sap:VirtualizedContainerService.HintSize="434,593" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Amazon.ca : PS5" sap:VirtualizedContainerService.HintSize="434,593" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -127,16 +127,15 @@
                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new System.Data.DataTable();</mca:CSharpValue>
                   </Variable.Default>
                 </Variable>
-                <Variable x:TypeArguments="sd:DataTable" Name="resultsTemp" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[resultsTemp]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Product Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Rating'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl idx='3' tag='span' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column name='Column1' exact='1' attr='text'&gt;&lt;webctrl idx='3' tag='span' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="10" ScopeIdentifier="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[resultsTemp]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Product Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Ratings'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column name='Column0' exact='1' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column name='Column3' exact='1' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="10" ScopeIdentifier="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
                 <uix:NExtractData.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="638, -98, 2382, 19564" FriendlyName="'if(window.mix_csa){wind…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="718a074e-6205-4c72-b5f5-2cd2499ed5fc" InformativeScreenshot="fadb28d41488c9b54ffef2ee5ec5a0f5.png" ScopeSelectorArgument="&lt;html title='Amazon.ca : PS5' /&gt;" SearchSteps="Selector" />
+                  <uix:TargetAnchorable DesignTimeRectangle="638, 372, 2382, 19564" FriendlyName="'if(window.mix_csa){wind…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="f75f323e-9162-48a7-af46-989bc82f4419" InformativeScreenshot="fadb28d41488c9b54ffef2ee5ec5a0f5.png" ScopeSelectorArgument="&lt;html htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;07234798-3937-4c18-8505-be242d3add3a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;ec6e3f72-9834-4871-a784-6afebc6243aa&amp;quot;}' title='Amazon.ca : PS5' /&gt;" SearchSteps="Selector" />
                 </uix:NExtractData.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -145,12 +144,12 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NExtractData>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[resultsTemp.Rows(0).ItemArray(1).ToString]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[resultsTemp.Rows(0).ItemArray(0).ToString]" />
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="0, 161, 3072, 1699" BrowserType="IE" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAACiSURBVDhPY/j//z8GvnHjhlpQUNBaPj6+DyAMYoPEsKnFEAApFBMTe9HR0VH+7t07fhAGsUFi2AxB4YAwyDaQBnRxkBhIDl0chQPCICfv2LHDHV1827ZtHiA5dHEw8dTI4j8MM6RcQsFf1zOB8Zd1ELpthzgck2QADI8aMGoATgOee/g+JtWAyfsNHsMN+HHytDPMEGIMAGm+/+aQ4////xkADNiBBUd/4MwAAAAASUVORK5CYII=" InformativeScreenshot="415cd09db7809b2cc583da682d91ed2d.png" Selector="&lt;html htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;8fd57c3b-17d9-4a40-9d7a-5428ad011d5a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;bd4be2bf-cae6-4470-9dd8-0aa726948b03&amp;quot;}' title='ps5 console | eBay'/&gt;" Url="[CurrentRow.ItemArray(1).ToString + UserInput]" />
+          <uix:TargetApp Area="0, 161, 3072, 1699" BrowserType="IE" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="fff5be0605dfb07d555eaecedc34babf.png" Selector="&lt;html htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;07234798-3937-4c18-8505-be242d3add3a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;ec6e3f72-9834-4871-a784-6afebc6243aa&amp;quot;}' title='Amazon.ca : PS5'/&gt;" Url="[CurrentRow.ItemArray(1).ToString + UserInput]" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
