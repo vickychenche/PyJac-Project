@@ -12,7 +12,7 @@
   <sap:VirtualizedContainerService.HintSize>825,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="80">
+    <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -57,7 +57,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -114,28 +114,29 @@
           <av:Size x:Key="ShapeSize">200,52</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Amazon.ca : PS5" sap:VirtualizedContainerService.HintSize="434,593" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Amazon.ca : PS5" sap:VirtualizedContainerService.HintSize="434,713" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,376" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,496" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
                   <Variable.Default>
                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new System.Data.DataTable();</mca:CSharpValue>
                   </Variable.Default>
                 </Variable>
+                <Variable x:TypeArguments="x:String" Name="resultsStr" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[resultsTemp]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Product Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Ratings'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column name='Column0' exact='1' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column name='Column3' exact='1' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="10" ScopeIdentifier="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[resultsTemp]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Product Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Ratings'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl idx='3' tag='span' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' attr='text' name='Column0'&gt;&lt;webctrl idx='3' tag='span' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='h2' /&gt;&lt;webctrl idx='1' tag='a' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;/column&gt;&lt;column exact='1' attr='text' name='Column1'&gt;&lt;webctrl idx='3' tag='span' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl idx='2' tag='div' /&gt;&lt;webctrl idx='1' tag='div' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;webctrl idx='1' tag='a' /&gt;&lt;webctrl idx='1' tag='i' /&gt;&lt;webctrl idx='1' tag='span' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="10" ScopeIdentifier="7657a8c7-78db-4474-b845-516a40cf9683" Version="V1">
                 <uix:NExtractData.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="638, 372, 2382, 19564" FriendlyName="'if(window.mix_csa){wind…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="f75f323e-9162-48a7-af46-989bc82f4419" InformativeScreenshot="fadb28d41488c9b54ffef2ee5ec5a0f5.png" ScopeSelectorArgument="&lt;html htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;07234798-3937-4c18-8505-be242d3add3a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;ec6e3f72-9834-4871-a784-6afebc6243aa&amp;quot;}' title='Amazon.ca : PS5' /&gt;" SearchSteps="Selector" />
+                  <uix:TargetAnchorable DesignTimeRectangle="638, -860, 2382, 19444" FriendlyName="'if(window.mix_csa){wind…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="ec9eacf0-e898-4cbb-a034-94ac7b3da83a" InformativeScreenshot="fadb28d41488c9b54ffef2ee5ec5a0f5.png" ScopeSelectorArgument="&lt;html title='Amazon.ca : PS5' /&gt;" SearchSteps="Selector" />
                 </uix:NExtractData.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -144,7 +145,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NExtractData>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[resultsTemp.Rows(0).ItemArray(0).ToString]" />
+              <ui:OutputDataTable DataTable="[resultsTemp]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[resultsStr]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[resultsStr]" />
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
